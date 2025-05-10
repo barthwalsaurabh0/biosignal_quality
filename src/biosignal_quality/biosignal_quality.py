@@ -707,11 +707,3 @@ def assess_quality(df,
     })
     
     return quality_df
-
-
-ppg1_df = pd.read_csv("48ppg.csv")
-# ppg1_df = ppg1_df[:len(ppg1_df)]
-qdff = assess_quality(ppg1_df, signal_col="ppg0", clean_func=nk.ppg_clean, segment_duration_sec=5)
-qdff.to_csv('quality_48.csv')
-# ppg1_df = pd.read_csv("49ppg.csv")
-# assess_quality(ppg1_df, signal_col="ppg0", clean_func=nk.ppg_clean, normalize_func=zscore_normalize,signal_label="PPG", plot="ppg_49_AIIMS_quality_report.html", segment_duration_sec=5, launch_dashboard=False, quality_threshold=0.35)
