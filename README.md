@@ -8,18 +8,18 @@ A comprehensive toolkit for analyzing, visualizing, and evaluating the quality o
 ## Screenshots
 
 ### DashBoard
-![Preview Dashboard 1](preview_dashboard_1.png)
+![Preview Dashboard 1](https://raw.githubusercontent.com/barthwalsaurabh0/biosignal_quality/refs/heads/master/preview_dashboard_1.png)
 
-![Preview Dashboard 2](preview_dashboard_2.png)
+![Preview Dashboard 2](https://raw.githubusercontent.com/barthwalsaurabh0/biosignal_quality/refs/heads/master/preview_dashboard_2.png)
 
 
 
 ### Report
-![Preview Report 1](preview_report_1.png)
+![Preview Report 1](https://raw.githubusercontent.com/barthwalsaurabh0/biosignal_quality/refs/heads/master/preview_report_1.png)
 
-![Preview Report 2](preview_report_2.png)
+![Preview Report 2](https://raw.githubusercontent.com/barthwalsaurabh0/biosignal_quality/refs/heads/master/preview_report_2.png)
 
-![Preview Report 3](preview_report_3.png)
+![Preview Report 3](https://raw.githubusercontent.com/barthwalsaurabh0/biosignal_quality/refs/heads/master/preview_report_3.png)
 
 
 
@@ -46,8 +46,7 @@ The library assesses signal quality based on the periodicity of waveforms. For p
 ## Installation
 
 ```bash
-pip install pandas numpy plotly dash
-pip install neurokit2  # For PPG/ECG signal processing
+pip install biosignal-quality
 ```
 
 ## Core Functions
@@ -93,7 +92,7 @@ quality_percentage = assess_quality_percentage(
     df=data,
     signal_col="ecg_signal",
     clean_func=nk.ecg_clean,
-    sampling_rate=250,
+    sampling_rate=200,
     quality_threshold=0.6,
     plot="ecg_quality_report.html"  # Optional: generate HTML report
 )
@@ -202,7 +201,7 @@ signal_quality_dashboard(
 
 ## HTML Report Contents
 
-When generating a quality report using `assess_quality_percentage` with the `plot` parameter, the HTML report includes:
+When generating a quality report using `assess_quality_percentage()` with the `plot` parameter, the HTML report includes:
 
 - **Summary Statistics**: Overall quality percentage and distribution
 - **Quality Timeline**: Heatmap showing quality scores over time
